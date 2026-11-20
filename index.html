@@ -65,6 +65,20 @@
           <div><b>+3</b><span>cœurs gagnés quand il finit par terre.</span></div>
           <div><b>1 000</b><span>points d'un coup à la 5e touche.</span></div>
         </div>
+        <div class="voix" id="voix">
+          <p class="titre-voix">Écoute-le râler, avec sa vraie voix</p>
+          <div class="pastilles">
+            <button type="button" class="hasard" data-son="0">▶ Au hasard</button>
+            <button type="button" data-son="1" aria-label="Écouter la phrase 1 d'Arnaud">1</button>
+            <button type="button" data-son="2" aria-label="Écouter la phrase 2 d'Arnaud">2</button>
+            <button type="button" data-son="3" aria-label="Écouter la phrase 3 d'Arnaud">3</button>
+            <button type="button" data-son="4" aria-label="Écouter la phrase 4 d'Arnaud">4</button>
+            <button type="button" data-son="5" aria-label="Écouter la phrase 5 d'Arnaud">5</button>
+            <button type="button" data-son="6" aria-label="Écouter la phrase 6 d'Arnaud">6</button>
+            <button type="button" data-son="7" aria-label="Écouter la phrase 7 d'Arnaud">7</button>
+            <button type="button" data-son="8" aria-label="Écouter la phrase 8 d'Arnaud">8</button>
+          </div>
+        </div>
         <div class="boutons" style="justify-content:flex-start">
           <a class="bouton principal" href="telecharger.html"><span>Viens le renverser</span></a>
           <a class="bouton second" href="telecharger.html#arnaud-unity"><span>Arnaud pour Unity</span></a>
@@ -172,6 +186,25 @@
 <footer>
   <div class="contenu">Crash Ta Race · jeu amateur gratuit · <a href="telecharger.html">Télécharger</a></div>
 </footer>
+<script>
+(function () {
+  var zone = document.getElementById('voix'); if (!zone) return;
+  var lecteur = new Audio(), dernier = 0, boutons = zone.querySelectorAll('button');
+  function eteindre() { boutons.forEach(function (b) { b.classList.remove('joue'); }); }
+  lecteur.addEventListener('ended', eteindre);
+  boutons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var n = +b.dataset.son;
+      if (!n) { do { n = 1 + Math.floor(Math.random() * 8); } while (n === dernier); }
+      else if (b.classList.contains('joue')) { lecteur.pause(); eteindre(); return; }
+      dernier = n; eteindre();
+      lecteur.src = 'sons/arnaud-' + n + '.mp3';
+      lecteur.play().catch(eteindre);
+      zone.querySelector('[data-son="' + n + '"]').classList.add('joue');
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
