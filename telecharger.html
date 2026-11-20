@@ -3,11 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Télécharger Crash Ta Race pour Windows</title>
-<meta name="description" content="Télécharge Crash Ta Race pour Windows : un seul fichier ZIP de 154 Mo, rien à installer. Mode d'emploi en 3 étapes.">
+<title>Télécharger Crash Ta Race pour Windows et Mac</title>
+<meta name="description" content="Télécharge Crash Ta Race pour Windows ou Mac : un seul fichier ZIP, rien à installer. Mode d'emploi en 3 étapes.">
 <meta property="og:title" content="Télécharger Crash Ta Race">
-<meta property="og:description" content="Jeu de course arcade gratuit pour Windows. Un ZIP de 154 Mo, rien à installer.">
-<meta property="og:image" content="https://toinan2000.github.io/crash-ta-race/images/jeu-campagne.jpg">
+<meta property="og:description" content="Jeu de course arcade gratuit pour Windows et Mac. Un ZIP, rien à installer.">
+<meta property="og:image" content="https://toinan2000.github.io/crash-ta-race/images/og-crash-ta-race.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://toinan2000.github.io/crash-ta-race/images/og-crash-ta-race.jpg">
 <link rel="icon" href="images/icone.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +25,8 @@
     <a class="marque" href="index.html"><img src="images/icone.png" alt="">Crash Ta Race</a>
     <nav>
       <a href="index.html">Le jeu</a>
-      <a href="#etapes">Mode d'emploi</a>
+      <a href="#etapes">Windows</a>
+      <a href="#mac">Mac</a>
       <a href="#config">Configuration</a>
       <a href="#aide">En cas de souci</a>
       <a href="#arnaud-unity">Arnaud pour Unity</a>
@@ -35,15 +40,16 @@
     <img class="logotype" src="images/logotype.png" alt="Crash Ta Race" style="width:min(560px,88%)">
     <p class="accroche">Un seul fichier, rien à installer.</p>
     <div class="boutons">
-      <a class="bouton principal" id="dl" href="https://github.com/Toinan2000/crash-ta-race/releases/latest/download/CrashTaRace-Windows.zip"><span>Télécharger pour Windows</span></a>
+      <a class="bouton principal" id="dl" href="https://github.com/Toinan2000/crash-ta-race/releases/latest/download/CrashTaRace-Windows.zip"><span>Windows</span></a>
+      <a class="bouton second" id="dl-mac" href="https://github.com/Toinan2000/crash-ta-race/releases/latest/download/CrashTaRace-Mac.zip"><span>Mac</span></a>
     </div>
-    <p class="petit">CrashTaRace-Windows.zip · 154 Mo · Windows 10 et 11 (64 bits) · gratuit</p>
+    <p class="petit">Windows 10 et 11 (64 bits) : 154 Mo · macOS 12 et suivants, puce Apple ou Intel : 162 Mo · gratuit</p>
   </div>
 </div>
 
 <section id="etapes">
   <div class="contenu">
-    <h2>3 <em>étapes</em></h2>
+    <h2>Sur <em>Windows</em></h2>
     <p class="chapo">Compte 1 à 2 minutes avec une bonne connexion.</p>
     <ol class="etapes">
       <li><strong>Télécharge le fichier <code>CrashTaRace-Windows.zip</code></strong><p>Clique sur le bouton rouge. Le fichier arrive dans ton dossier « Téléchargements ».</p></li>
@@ -54,13 +60,31 @@
   </div>
 </section>
 
+<section class="alt" id="mac">
+  <div class="contenu">
+    <h2>Sur <em>Mac</em></h2>
+    <p class="chapo">Pour macOS 12 ou plus récent, sur les Mac à puce Apple (M1 et suivantes) comme sur les Mac Intel.</p>
+    <ol class="etapes">
+      <li><strong>Télécharge le fichier <code>CrashTaRace-Mac.zip</code></strong><p>Avec le bouton « Mac » en haut de la page.</p></li>
+      <li><strong>Double-clique sur le ZIP</strong><p>macOS le décompresse et crée un dossier « Crash Ta Race ».</p></li>
+      <li><strong>Fais un clic droit sur l'application, puis « Ouvrir »</strong><p>Confirme avec « Ouvrir ». Un simple double-clic est refusé la première fois, car l'application n'est pas signée auprès d'Apple.</p></li>
+    </ol>
+    <p class="note" style="margin-top:22px"><strong>macOS refuse quand même, ou dit que l'application est endommagée ?</strong> Ouvre Réglages Système, puis Confidentialité et sécurité, et clique sur « Ouvrir quand même » en bas de la page. Sinon, ouvre le Terminal, tape <code>xattr -cr</code> suivi d'un espace, glisse l'application dans la fenêtre, appuie sur Entrée, puis relance le jeu.</p>
+    <p class="note" style="margin-top:14px"><strong>Version Mac toute neuve.</strong> Elle a été construite depuis Windows et n'a pas encore été essayée sur un vrai Mac. Si elle ne se lance pas chez toi, la version Windows reste la référence.</p>
+    <dl class="fiche" style="margin-top:22px">
+      <dt>Fichier</dt><dd><code>CrashTaRace-Mac.zip</code>, 161 920 378 octets (162 Mo)</dd>
+      <dt>SHA-256</dt><dd><code>e9db088d9b1182c9aa88cc96f75f2b2a23fac5bdfae6e24bfe9c31b7f7833b26</code></dd>
+    </dl>
+  </div>
+</section>
+
 <section class="alt" id="config">
   <div class="contenu">
     <h2>Pour jouer dans les <em>meilleures conditions</em></h2>
     <p class="chapo">Le jeu se règle tout seul sur la fréquence de ton écran.</p>
     <dl class="fiche">
-      <dt>Système</dt><dd>Windows 10 ou 11, 64 bits. Pas de version Mac ni Linux pour l'instant.</dd>
-      <dt>Carte graphique</dt><dd>Compatible DirectX 12. Une carte de jeu récente est conseillée (le jeu a été réglé sur une RTX 5080, où il tient 240 images par seconde). Sur un portable, branche le secteur et choisis la carte graphique dédiée.</dd>
+      <dt>Système</dt><dd>Windows 10 ou 11 (64 bits), ou macOS 12 et suivants. Pas de version Linux pour l'instant.</dd>
+      <dt>Carte graphique</dt><dd>Sous Windows, compatible DirectX 12. Une carte de jeu récente est conseillée (le jeu a été réglé sur une RTX 5080, où il tient 240 images par seconde). Sur un portable, branche le secteur et choisis la carte graphique dédiée.</dd>
       <dt>Mémoire</dt><dd>8 Go.</dd>
       <dt>Espace disque</dt><dd>600 Mo le temps de décompresser, 260 Mo ensuite.</dd>
       <dt>Son</dt><dd>Un casque ou de bonnes enceintes : les moteurs sont de vrais enregistrements.</dd>
